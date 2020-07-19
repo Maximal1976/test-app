@@ -10,9 +10,9 @@ import com.maxhryhlevych.app.model.Announcement;
 
 @Repository
 public interface AnnouncementRepo extends JpaRepository<Announcement, Long> {
-	@Query("select a from Announcement a where title like %?1%")
+	@Query("SELECT a FROM Announcement a WHERE title LIKE %?1%")
 	List<Announcement> findByTitle(String title);
 	
-	@Query("select a from Announcement a where description like %?1%")
+	@Query("SELECT a FROM Announcement a WHERE description LIKE %?1%")
 	List<Announcement> findByDescription(String description);
 }

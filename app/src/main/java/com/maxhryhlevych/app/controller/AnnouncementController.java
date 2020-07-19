@@ -1,6 +1,7 @@
 package com.maxhryhlevych.app.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,8 +14,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.maxhryhlevych.app.model.Announcement;
 import com.maxhryhlevych.app.repo.AnnouncementRepo;
+import com.maxhryhlevych.app.service.SimilarAnnouncements;
 
 
 @RestController
@@ -23,6 +26,9 @@ public class AnnouncementController {
 	
 	@Autowired
 	private AnnouncementRepo repo;
+	
+	@Autowired
+	private SimilarAnnouncements similar;
 
 	public AnnouncementController(AnnouncementRepo repo) {
 		this.repo = repo;
@@ -31,6 +37,11 @@ public class AnnouncementController {
 	@GetMapping
 	public List<Announcement> findAllAnnouncements() {
 		return repo.findAll();
+	}
+	
+	@GetMapping("/similar/{id}")
+	public List<Optional<Announcement>> findSimilarAnnouncements(@PathVariable("id") Long id) throws JsonProcessingException {
+		return similar.getSimilarAnnouncements(id);
 	}
 	
 	@GetMapping("{id}")

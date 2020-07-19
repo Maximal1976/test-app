@@ -27,9 +27,8 @@ public class Announcement {
 	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd.MM.yyyy", timezone = "Europe/Kiev")
 	private Date dateAdded = new Date(System.currentTimeMillis());
 	
-	
 		
-	//Constructor
+	//Constructors
 	public Announcement() {
 		super();
 	}
@@ -66,5 +65,4 @@ public class Announcement {
 	public void setDateAdded(Date dateAdded) {
 		this.dateAdded = dateAdded;
 	}
-	
 }
