@@ -13,11 +13,18 @@ b. Should show top 3 similar announcements
 *two announcements are considered similar if they have at least one same word in title and
 description
 
+
+
 Using my API:
 
 /api/announcement/  - method GET -  all announcements
+
 /api/announcement/{announcement id}   - method GET -   announcement with given id  
+
 /api/announcement/similar/{announcement id}   - method GET -   3 similar announcements to announcement with given id
+
 /api/announcement/  - method POST -  post announcement
+
 /api/announcement/{announcement id}  -  method PUT - edit announcement with given id
+
 /api/announcement/{announcement id}  -  method DELETE - delete announcement with given id 
