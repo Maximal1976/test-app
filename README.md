@@ -16,8 +16,8 @@ description
 Using my API:
 
 /api/announcement/  - method GET -  all announcements
-/api/announcement/{id запису}   - method GET -   announcement with given id  
-/api/announcement/similar/{id запису}   - method GET -   3 similar announcements to announcement with given id
+/api/announcement/{announcement id}   - method GET -   announcement with given id  
+/api/announcement/similar/{announcement id}   - method GET -   3 similar announcements to announcement with given id
 /api/announcement/  - method POST -  post announcement
-/api/announcement/{id запису}  -  method PUT - edit announcement with given id
-/api/announcement/{id запису}  -  method DELETE - delete announcement with given id 
+/api/announcement/{announcement id}  -  method PUT - edit announcement with given id
+/api/announcement/{announcement id}  -  method DELETE - delete announcement with given id 
