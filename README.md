@@ -14,6 +14,7 @@ b. Should show top 3 similar announcements
 description
 
 Using my API:
+
 /api/announcement/  - method GET -  all announcements
 /api/announcement/{id запису}   - method GET -   announcement with given id  
 /api/announcement/similar/{id запису}   - method GET -   3 similar announcements to announcement with given id
